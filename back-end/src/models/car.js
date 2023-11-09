@@ -22,7 +22,7 @@ const Car = z.object({
     .max(20, { message: 'O nome da cor pode conter, no máximo, 25 caracteres' }),
 
   year_manufacture: 
-    z.number()
+    z.coerce.number()
     .min(1940, { message: 'Escolha um ano entre 1940 à 2023' })
     .max(2023, { message: 'Escolha um ano entre 1940 à 2023' }),
   
@@ -42,14 +42,14 @@ const Car = z.object({
     .nullable(),
     
   selling_price:
-    z.number()
+    z.coerce.number()
     .min(2000, { message: 'O valor mínimo para preço de venda é de R$2.000,00' })
     .nullable(),
   
   customer_id: 
-    z.number()
+    z.coerce.number()
     .min(0, { message: 'O ID deve ser positivo' })
     .nullable(),
 })
 
-export default Customer
+export default Car
