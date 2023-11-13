@@ -18,8 +18,8 @@ const Car = z.object({
 
   color: 
     z.string()
-    .min(4, { message: 'O nome da cor deve ter, no mínimo, 1 caractere' })
-    .max(20, { message: 'O nome da cor pode conter, no máximo, 25 caracteres' }),
+    .min(4, { message: 'O nome da cor deve ter, no mínimo, 4 caracteres' })
+    .max(20, { message: 'O nome da cor pode conter, no máximo, 20 caracteres' }),
 
   year_manufacture: 
     z.coerce.number()
